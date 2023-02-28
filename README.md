@@ -1,0 +1,2 @@
+# Diary
+Your Trusted Companion
