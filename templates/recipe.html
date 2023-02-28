@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ dish_name }}
+{% endblock %}
+
+{% block main %}
+    <form action="/recipe" method="post">
+        Enter the dish : <input autocomplete="off" class="form-control" name="dish_name" placeholder="Name Of the Dish" type="text" >
+        <br>
+        <br>
+        <button class="btn btn-primary" type="submit">See</button>
+        <p>
+            <h3 class="heading">Name of the dish: {{ dish_name }}</h3>
+        </p>
+        <p>
+            <h3 class="heading">Ingredients :</h3>
+
+            {{ ingredients }}
+        </p>
+        <p>
+            <h3 class="heading">Recipe In Detail : </h3>
+
+            {{ recipe }}
+        </p>
+    </form>
+{% endblock %}

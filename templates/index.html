@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Dish name</th>
+                <th>Updated on</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td>{{ no_of_recipes }}</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            {% for row in recipe_details %}
+                <tr>
+                    <td>{{ row.dish_name }}</td>
+                    <td>{{ row.updated_on }}</td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
