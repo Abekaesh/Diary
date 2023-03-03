@@ -1,59 +1,126 @@
-nav .navbar-brand
-{
-    /* size for brand */
-    font-size: xx-large;
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Source+Code+Pro:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0%;
+    background: white;
 }
 
-/* Colors for brand */
-nav .navbar-brand .blue
-{
-    color: #537fbe;
-}
-nav .navbar-brand .red
-{
-    color: #ea433b;
-}
-nav .navbar-brand .yellow
-{
-    color: #f5b82e;
-}
-nav .navbar-brand .green
-{
-    color: #2e944b;
-}
-
-main .form-control
-{
-    /* Center form controls */
-    display: inline-block;
-
-    /* Override Bootstrap's 100% width for form controls */
-    width: auto;
-}
-
-main
-{
-    /* Scroll horizontally as needed */
-    overflow-x: auto;
-
-    /* Center contents */
+#head{
+    color: orange;
+    font-size: 90px;
     text-align: center;
-
+    font-family: 'Lobster', cursive;
+    
+}
+#subtitle{
+    color:rgba(255, 145, 0, 0.932);
+    font-size: smaller;
+    font-family: 'Source Code Pro', monospace;
+}
+.links{
+    background: rgb(22, 21, 21);
+    text-align: center;
+    height: 100px;
+    padding-top: 60px;
+    display: block;
+    line-height: 60px;
+}
+.intro, p{
+    color: black;
+    background-color: orange;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+}
+.menu > a{
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
     background-color: white;
+    justify-content: space-evenly;
+}
+.intro > input{
+    background-color:rgb(22, 21, 21);
+    color: orange;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    border: black;
+    border-radius:10px;
+}
+.intro > input:hover{
+    background-color: white;
+    color: orangered;
+}
+h3{
+    color: orange;
+    font-size: 80px;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
+.form, tr{
+    
+    background-color: orange;
+    color: black;
+    font-size: 45px;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    
+}
+td{
+    text-align: left;
+    border: none;
+}
+table{
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+input, #experience{
+    background-color:rgb(22, 21, 21);
+    color: orange;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    border: black;
+    border-radius:10px;
+}
+#sign:hover{
+    background-color: orange;
+    color:black;
+}
+.footer>p{
+    font-size: large;
+
+}
+p.flash{
+    background-color: lightseagreen;
 }
 
-main img
-{
-    /* Constrain images on small screens */
-    max-width: 100%;
-}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    background-color: rgb(51, 47, 47);
+    padding: 10px;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
 
-body
-{
-    background-color: lightpink;
-}
-
-.heading
-{
-    text-decoration: underline;
-}
+  #tagname{
+    width: 600px;
+  }
+  #experience{
+    width: 600px;
+    height: 700px;
+  }

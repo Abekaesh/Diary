@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Hello, Flask</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+    </head>
+    <body>
+        <section id="top">
+            <div class="links">
+                <h2><span id="head">Diary</span><span id="subtitle">Your trusted companion</span></h2>
+            </div>
+            <div class="links menu">
+                {% if session.user_id %}
+                    <a href={{url_for('home')}} >Home</a>
+                    <a href={{url_for('vision')}}>Vision</a>
+                    <a href={{url_for('write')}}>Write</a>
+                    <a href={{url_for('dashboard')}}>Dashboard</a>
+                    <a href={{url_for('logout')}}>Logout</a>
+                {% else %}
+                    <a href={{url_for('home')}} >Home</a>
+                    <a href={{url_for('vision')}}>Vision</a>
+                    <a href={{url_for('signin')}}>Signin</a>
+                    <a href={{url_for('login')}}>Login</a>
+                {% endif %}
+            </div>
+        </section>
+        {% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+                    <p class="flash">{{ message }}</p>  
+               {% endfor %}  
+         {% endif %}  
+      {% endwith %}  
+        <section class="form">
+            <div>
+                <h3>Sign in</h3>
+                <p>
+                    Hello there &#128075;, Can you introduce yourself?
+
+                </p>
+                <form method="post" action="{{url_for('signin')}}">
+                    <table>
+                        <tr>
+                            <td><label for="username">Full Name </label></td>
+                            <td>:<input required type="text" autocomplete="off" name="username" id="username" placeholder="Enter your full name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="mailid">Email </label></td>
+                            <td>:<input required type="email" autocomplete="off" name="mailid" id="mailid" placeholder="Enter your email address"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="dob">DOB </label></td>
+                            <td>:<input required type="date" autocomplete="off" name="dob" id="dob" placeholder="Enter your DOB"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pass">Password </label></td>
+                            <td>:<input required type="password" autocomplete="off" name="pass" id="pass" placeholder="Enter your password"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="repass">Confirm password </label></td>
+                            <td>:<input required type="password" autocomplete="off" name="repass" id="repass" placeholder="Re-enter your password"></td>
+                        </tr>
+                    </table>
+                    <div class="submit">
+                        <input type="submit" id='sign' value="Submit">
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+        <section class="footer">
+            <p>
+                Copyrights © Reserved| Developed by P A Abekaesh
+            </p>
+        </section>
+    </body>
+</html>

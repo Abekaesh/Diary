@@ -1,4 +1,4 @@
-#!/home/abekaesh/diary/venv/bin/python3
+#!/home/abekaesh/flask_project/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
